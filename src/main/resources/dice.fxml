@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.stage.*?>
+
+<Stage title="Simple chat" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.view.DiceController">
+   <scene>
+      <Scene>
+         <VBox>
+            <Label text="&lt;wynik rzutu kostką&gt;">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <Button contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Rzuć!" VBox.vgrow="ALWAYS" />
+         </VBox>
+      </Scene>
+   </scene>
+</Stage>
