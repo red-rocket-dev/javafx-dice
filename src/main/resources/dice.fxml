@@ -6,15 +6,24 @@
 <?import javafx.scene.text.*?>
 <?import javafx.stage.*?>
 
-<Stage title="Simple chat" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.view.DiceController">
+<Stage title="Simple chat" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.view.DiceController">
    <scene>
       <Scene>
          <VBox>
-            <Label text="&lt;wynik rzutu kostką&gt;">
+            <BorderPane prefHeight="0.0" prefWidth="287.0">
+               <right>
+                  <Label fx:id="throwCountLabel" text="&lt;ilosc wykonanych rzutow&gt;" BorderPane.alignment="CENTER" />
+               </right>
+               <left>
+                  <Button mnemonicParsing="false" onAction="#refreshThrowCount" prefHeight="26.0" prefWidth="128.0" text="Odśwież" BorderPane.alignment="CENTER" />
+               </left>
+            </BorderPane>
+            <Label fx:id="throwResultLabel" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="&lt;wynik rzutu kostką&gt;" textAlignment="CENTER">
                <font>
                   <Font size="30.0" />
                </font></Label>
-            <Button contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Rzuć!" VBox.vgrow="ALWAYS" />
+            <Button contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#throwBtnAction" text="Rzuć!" VBox.vgrow="ALWAYS" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#countAvgBtnAction" text="Wylicz średnią!" />
          </VBox>
       </Scene>
    </scene>
